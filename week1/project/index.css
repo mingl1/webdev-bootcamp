@@ -45,13 +45,12 @@ nav{
 .contentBox{
     display: flex;
     flex-direction: column;
-    padding: 2%;
     height: 50vh;
     width: 100vw;
     background-color: pink;
+    padding: 30px;
 }
 .todo1, .todo2{
-
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -66,20 +65,25 @@ nav{
     text-align: center;
 }
 .address{
-    font-size: 1.2vw;
-    margin-top: 0px;
+    white-space: nowrap;
+    display: flex;
+    font-size: 1.5vmin;
+  
 }
 .img1{
+
     width: 100%;
     height: 100%;
 }
 .p1{
-
-    font-size: 1.2vw;
+    margin: auto;
+    font-size: 1.5vmin;
     color: white;
     font-weight: bold;
 }
 .todo1desc{
+    display: flex;
+    margin: auto;
     text-align: center;
     width: 60%;
     height: 100%;
@@ -90,6 +94,93 @@ nav{
         font-size: 0.9vh;
     }
     .address{
+        white-space: normal;
         font-size: 0.9vh;
     }
+    /* body{
+        background-color: brown;
+    } */
+}
+
+@media only screen and (max-width:400px){
+
+    .p1{
+        font-size: 2.6vw;
+    }
+    .address{
+        font-size: 0.8vh;
+    }
+
+}
+
+.newsfeed p{
+    margin-top: 0;
+    margin-left: 2%;
+}
+.newsfeed a{
+    font-weight: bold;
+    text-decoration: none;
+}
+.costs{
+    width: 30%;
+}
+table{
+    width: 100%;
+    border-spacing: 3px;
+    border: 2px solid;
+}
+.expensive{
+    background-color: rgb(223, 187, 187);
+
+}
+th{
+    background-color: rgb(145, 236, 122);
+}
+.total td{
+    font-weight: bold;
+    background-color: rgb(145, 236, 122);
+}
+.contacts{
+    margin-left: 50px;
+    width: 100%;
+}
+.contactIcons{
+    margin: 20px;
+    margin-top: 0;
+    width: 10%;
+    min-width: 150px
+    
+}
+.contactIcons img{
+    width: 50%;
+}
+.contactBox{
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    white-space: nowrap;
+}
+footer{
+    text-align: center;
+    width: 100%;
+}
+footer ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+footer li{
+    margin:10px;
+    margin-left: 5%;
+}
+.nav_items{
+    font-size: large;
+}
+h4{
+    margin: 5px;
 }
