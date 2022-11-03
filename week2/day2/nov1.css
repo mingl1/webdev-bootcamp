@@ -1,0 +1,38 @@
+.mountainbox{
+    background-image: url('images/mountain.jpg');
+    background-size: 100% 100%;
+    border: 2px solid red;
+    height: 400px;
+    position: relative;
+}
+
+.mountainbox div{
+    width: 24%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    animation-name: movebus;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+.mountainbox div img{
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes movebus{
+    0%{left:0;
+        width: 24%;
+    
+    }
+    50%{
+        left:20%;
+        width: 20%;
+    }
+    100%{
+        left:76%;
+        width: 24%;
+    }
+}
