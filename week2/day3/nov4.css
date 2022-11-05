@@ -1,0 +1,62 @@
+body{
+    background-color: bisque;
+}
+
+.btn{
+    border-radius: 10%;
+    border: 2px white solid;
+    text-decoration: none;
+    padding: 2%;
+    background-color: orange;
+    pointer-events: auto;
+    margin-left: 10%;
+}
+body h1{
+    text-align: center;
+}
+body .doorsbox{
+    margin: 5%;
+    text-align: center;
+}
+.modalwindowbox{
+    background-color: rgb(207, 201, 201,0.7);
+    position:fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    /* opacity: 0;
+    pointer-events: none; */
+    /* either works to hide modalwindow */
+}
+.modalwindowbox:target{
+    display:initial;
+    pointer-events: none;
+}
+.messagebox,.messagebox1{
+    background-color: aliceblue;
+    background-image: url(dim1.jpg);
+    background-size: 100% 100%;
+    text-align: left;
+    width: 50%;
+    margin: auto;
+    margin-top: 30%;
+    border: inset antiquewhite;
+    padding: 3%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue
+}
+.messagebox1{
+    background-image: url(dim2.jpg);
+}
+.messagebox h1{
+}
+.messagebox a,.messagebox1 a{
+    display: inline-block;
+    border: 2px solid whitesmoke;
+    text-decoration: none;
+    padding: 2px;
+    background-color:antiquewhite;
+    pointer-events: all;
+}
