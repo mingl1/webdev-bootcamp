@@ -1,5 +1,5 @@
 body{
-    background-color: springgreen;
+    background-color: #193b4a;
 }
 .headerbox{
     height: 30vh;
@@ -22,7 +22,6 @@ body{
         }
 }
 .titlebox{
-    background-color: yellow;
     height: 100%;
     width: 70%;
     float: left;
@@ -38,18 +37,68 @@ body{
 .titlebox h1{
     font-size: 3vmax;
     margin-bottom: 0;
+    color: white;
     font-family: Snell Roundhand, cursive ;
     font-weight: 200;
 }
 .titlebox h2{
     font-size: 2vmax;
     font-weight: 100;
+    color:wheat;
 }
 .slideshowbox{
     margin-top: 2vh;
     height: 10vh;
     background-color: bisque;
+    width: 500%;
+    box-sizing: border-box;
+    animation: 10s infinite alternate ease slideshow;
+
 }
+.slide1,.slide2,.slide3,.slide4,.slide5{
+    text-align: center;
+    /* background-color: bisque; */
+    width:20%;
+    /* border:2px solid rgb(0, 30, 128); */
+    height:100%;
+    float:left; 
+    box-sizing: border-box;
+    background-color: #2d6364;
+}
+.slide1{
+    background-color: #a1d5cb;
+}
+.slide2{
+    background-color: #8ab7b0;
+}
+.slide3{
+    background-color: #5b7b7a;
+}
+.slide4{
+    background-color: #497976;
+}
+.slide5{
+    background-color: #377771;
+}
+
+@keyframes slideshow {
+
+
+0%{ margin-left: 0%;}
+
+25% {margin-left: -100%;}
+
+50%{ margin-left: -200%;}
+
+75%{margin-left: -300%;}
+
+100%{
+    margin-left:-400%;
+}
+    
+}
+
+
 .herobox{
     height: 30vh;
     background-color: pink;
