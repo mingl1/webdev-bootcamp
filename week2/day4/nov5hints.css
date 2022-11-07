@@ -1,8 +1,12 @@
 body{
     background-color: #193b4a;
+    overflow-x: hidden;
+    height: 100vh;
+    padding:0;
+    margin: 0;
 }
 .headerbox{
-    height: 30vh;
+    height: 30%;
 }
 .logobox{
     height: 100%;
@@ -35,7 +39,7 @@ body{
     height: 100%;
 }
 .titlebox h1{
-    font-size: 3vmax;
+    font-size: 4.5vmax;
     margin-bottom: 0;
     color: white;
     font-family: Snell Roundhand, cursive ;
@@ -47,13 +51,32 @@ body{
     color:wheat;
 }
 .slideshowbox{
-    margin-top: 2vh;
-    height: 10vh;
-    background-color: bisque;
+    display: flex;
+    /* fix divs have different height due to line breaks */
+    align-content: center;  
+    align-items: center;
     width: 500%;
-    box-sizing: border-box;
     animation: 10s infinite alternate ease slideshow;
+}
+.slideshowbox2{
+    display: flex;
+    /* fix divs have different height due to line breaks */
+    align-content: center;  
+    align-items: center;
+    position: relative;
+    border: 2px solid ;
+    width: 100%;
+    height: 25%;
+    background-color: beige;
+}
 
+.slideshowbox div i{
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+.slideshowbox div strong{
+    font-size: 1.3em;
+    margin-left: 5px;
 }
 .slide1,.slide2,.slide3,.slide4,.slide5{
     text-align: center;
@@ -97,9 +120,190 @@ body{
 }
     
 }
+@keyframes slideshow2{
 
+
+    0%,50%,100%{ margin-left: 0;}
+    
+    60%,90%{
+        margin-left:-100%;
+    }
+
+        
+    }
 
 .herobox{
-    height: 30vh;
-    background-color: pink;
+    height: 50%;   
+    width: 100%;
+    position: relative;
+}
+.herobox img{
+    width: 100%;    
+    height: 100%;
+}
+.herobox textarea{
+    font-family: 'Courier New', Courier, monospace;
+    width: 25%;
+    height: 50%;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+
+}
+
+.introbox{
+    min-height: 30vw;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    position:relative;
+}
+.introbox h3{
+    font-size: 2vmax;
+}
+.introbox p{
+    font-size: 1.5vmax;
+}
+.intro1{    
+    box-sizing: border-box;
+    background-image:   linear-gradient(45deg, rgba(104, 123, 230, 0.52), rgba(136, 49, 114, 0.73)),
+    url('images/intro_img1.jpg');
+    background-size: 100% 100%;
+    text-align: center;
+    width: 35%;
+    margin-right: 25%;
+    margin-left:2%;
+    margin-top:2%;
+    height: 90%;
+}
+.intro1 img{
+    width: 100%;
+    height: 100%;
+}
+.intro2{
+    box-sizing: border-box;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 2%;
+    margin-top: 2%;
+    background: linear-gradient(180deg, rgba(104, 123, 230, 0.52), rgba(136, 49, 114, 0.73));
+    width: 35%;
+    height: 90%;
+}
+.products1{
+    margin-top: 5%;
+    padding: 2%;
+    width: 91.2%;
+    height: 60%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    background-color: #497976;
+    min-height: 400px;
+}
+.lotions{
+    display: flex;
+    height: 85%;
+}
+.lotions div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 2px solid;
+    width: 33%;
+}
+.lotions h2, .lotions p,.lotions h3{
+    margin-top: 0;
+}
+.lotions h3{
+    color: rgb(137, 191, 57);
+    font-size: 1.5vmax;
+    font-weight: 300;
+}
+.lotions h2{
+    font-size: 2vmax;
+}
+.lotions p{
+    font-size: 1.25vmax;
+}
+.lotions div img{
+    min-width: 100px;
+    min-height: 150px;
+    width: 70%;
+    height: 70%;
+}
+.lotions a{
+    text-decoration: none;
+    font-size: 1.5vmax;
+    padding: 1vmax 1vmax;
+    border-radius: 10px;
+    color: wheat;
+    font-weight: 100;
+    background-color:black;
+    border: 0;
+    margin-bottom: 5px;
+}
+.modalwindowbox{
+    background-color: rgb(207, 201, 201,0.7);
+    position:fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    /* opacity: 0;
+    pointer-events: none; */
+    /* either works to hide modalwindow */
+}
+.modalwindowbox:target{
+    display:flex;
+    pointer-events: none;
+}
+.messagebox,.messagebox1{
+    background-color: aliceblue;
+    background-image: url(dim1.jpg);
+    background-size: 100% 100%;
+    text-align: left;
+    width: 40%;
+    margin: auto;
+    margin-top: 20%;
+    border: inset antiquewhite;
+    padding: 3%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue
+}
+
+.messagebox a,.messagebox1 a{
+    display: inline-block;
+    border: 2px solid whitesmoke;
+    text-decoration: none;
+    padding: 2px;
+    background-color:antiquewhite;
+    pointer-events: all;
+}
+.lotion1{
+
+    height: 60%;
+    background-color: #193b4a;
+    display: flex;
+    flex-direction: row;
+}
+.lotion1 .item1box{
+    width: 50%;
+    background-color: beige;
+}
+.lotion1 img{
+    width: 100%;
+    height: 100%;
+}
+.lotion1desc{
+    width: 50%;
+    height: 60%;
+    background-color: brown;
+}
+.lotion1desc h3{
+    font-weight: 300;
 }
