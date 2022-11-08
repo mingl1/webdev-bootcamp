@@ -1,9 +1,10 @@
 body{
-    background-color: #193b4a;
+    background-color: #3B6564;
     overflow-x: hidden;
     height: 100vh;
     padding:0;
     margin: 0;
+    min-height: 600px;
 }
 .headerbox{
     height: 30%;
@@ -58,17 +59,7 @@ body{
     width: 500%;
     animation: 10s infinite alternate ease slideshow;
 }
-.slideshowbox2{
-    display: flex;
-    /* fix divs have different height due to line breaks */
-    align-content: center;  
-    align-items: center;
-    position: relative;
-    border: 2px solid ;
-    width: 100%;
-    height: 25%;
-    background-color: beige;
-}
+
 
 .slideshowbox div i{
     font-size: 0.8em;
@@ -83,10 +74,11 @@ body{
     /* background-color: bisque; */
     width:20%;
     /* border:2px solid rgb(0, 30, 128); */
-    height:100%;
+    min-height:100%;
     float:left; 
     box-sizing: border-box;
     background-color: #2d6364;
+
 }
 .slide1{
     background-color: #a1d5cb;
@@ -133,7 +125,7 @@ body{
     }
 
 .herobox{
-    height: 50%;   
+    height: 65%;   
     width: 100%;
     position: relative;
 }
@@ -148,6 +140,9 @@ body{
     position: absolute;
     left: 10%;
     top: 10%;
+    color:white;
+    border: none;
+    background-color:#04151F;
 
 }
 
@@ -177,12 +172,14 @@ body{
     margin-left:2%;
     margin-top:2%;
     height: 90%;
+    border-radius: 10px;
 }
 .intro1 img{
     width: 100%;
     height: 100%;
 }
 .intro2{
+    border-radius: 10px;
     box-sizing: border-box;
     flex-direction: column;
     box-sizing: border-box;
@@ -192,15 +189,19 @@ body{
     width: 35%;
     height: 90%;
 }
-.products1{
+.products1, .products2{
     margin-top: 5%;
     padding: 2%;
     width: 91.2%;
-    height: 60%;
+    height: 67%;
     margin-left: 2.5%;
     margin-right: 2.5%;
     background-color: #497976;
+    border-radius: 10px;
     min-height: 400px;
+}
+.products2{
+    background-color: #3B6564;
 }
 .lotions{
     display: flex;
@@ -212,7 +213,6 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
-    border: 2px solid;
     width: 33%;
 }
 .lotions h2, .lotions p,.lotions h3{
@@ -225,13 +225,14 @@ body{
 }
 .lotions h2{
     font-size: 2vmax;
+    color: whitesmoke;
 }
 .lotions p{
+    color: whitesmoke;
     font-size: 1.25vmax;
 }
 .lotions div img{
-    min-width: 100px;
-    min-height: 150px;
+
     width: 70%;
     height: 70%;
 }
@@ -240,70 +241,150 @@ body{
     font-size: 1.5vmax;
     padding: 1vmax 1vmax;
     border-radius: 10px;
-    color: wheat;
-    font-weight: 100;
+    color: whitesmoke;
+    font-weight: 500;
     background-color:black;
     border: 0;
     margin-bottom: 5px;
 }
+.lotions a:active{
+    color: gray;
+}
+.modalwindowbox a:active{
+    color: whitesmoke;
+}
 .modalwindowbox{
+    overflow:auto;
+    position: fixed;
     background-color: rgb(207, 201, 201,0.7);
-    position:fixed;
+    z-index: 1;
+    display: none;
+    height: 100%;    
+    width: 100%;
     left: 0;
     top: 0;
-    bottom: 0;
-    right: 0;
-    display: none;
+    bottom:0;
+    right:0;
     /* opacity: 0;
     pointer-events: none; */
     /* either works to hide modalwindow */
 }
 .modalwindowbox:target{
     display:flex;
-    pointer-events: none;
+
 }
-.messagebox,.messagebox1{
-    background-color: aliceblue;
+.messagebox{
+
+    min-width: 200px;
+    background-color: white;
     background-image: url(dim1.jpg);
     background-size: 100% 100%;
     text-align: left;
     width: 40%;
     margin: auto;
-    margin-top: 20%;
+    margin-top: 10%;
+    
     border: inset antiquewhite;
     padding: 3%;
+    padding-top: 2%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: aliceblue
 }
+.messagebox h4{
+    font-size: 3vmax;
+}
 
-.messagebox a,.messagebox1 a{
-    display: inline-block;
-    border: 2px solid whitesmoke;
+.exit{
     text-decoration: none;
-    padding: 2px;
-    background-color:antiquewhite;
+    padding: 2px 4px;
+    padding-top: 0px;
+    border-radius: 40%;
     pointer-events: all;
+    float: inline-end;
+}
+.exit:hover{
+    background-color: black;
+    color: white;
+}
+.messagebox h4{
+    color: black;
 }
 .lotion1{
-
     height: 60%;
-    background-color: #193b4a;
     display: flex;
     flex-direction: row;
+
 }
+
 .lotion1 .item1box{
     width: 50%;
     background-color: beige;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding-top:15px;
+    min-height: 100%;
 }
 .lotion1 img{
     width: 100%;
     height: 100%;
 }
 .lotion1desc{
+    background-color: #FFFDD0;
+    color: black;
     width: 50%;
-    height: 60%;
-    background-color: brown;
+    height: 100%;
 }
 .lotion1desc h3{
+    
+    font-size: 1.6vmax;
     font-weight: 300;
+}
+.lotion1desc h2{
+    font-size: 2.5vmax;
+    margin-bottom: 20%;
+}
+.lotion1desc p{
+    font-size: 1.2vmax;
+    font-weight: 100;
+}
+.continue{
+    text-align: center;
+    width: 100%;
+    height: 30%;
+    margin-top: 2%;
+}
+.continue a{
+    font-size: 2vmax;
+    border-radius: 10px;
+    background-color:#e1d5c6;
+    text-decoration: none;
+    width: 20%;
+    padding: 4px;
+}
+@media only screen and (max-height:500px)and (max-width:500px){
+    .lotion1desc h3{
+        font-size: 0.7em;
+    }
+    .lotion1desc h2{
+        font-size: 0.9em;
+    }
+    .lotion1desc p{
+        font-size: 0.5em;
+    }
+    .continue a{
+        font-size: 0.7em;
+    }
+}
+
+.header1{
+    font-size: 1.6em;
+    margin-top: 0;
+    color:#a1d5cb;
+}
+.products1 hr{
+    margin-bottom: 2%;
+    color: #8ab7b0;
+}
+.continue a:hover{
+    background-color:#ADAAA0;
 }
