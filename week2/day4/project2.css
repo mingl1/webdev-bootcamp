@@ -1,10 +1,11 @@
-body{
+body, main{
     background-color: #3B6564;
-    overflow-x: hidden;
+    overflow-x:hidden;
     height: 100vh;
     padding:0;
     margin: 0;
     min-height: 600px;
+    min-width: 340px;
 }
 .headerbox{
     height: 30%;
@@ -40,7 +41,7 @@ body{
     height: 100%;
 }
 .titlebox h1{
-    font-size: 4.5vmax;
+    font-size: 3.5vmax;
     margin-bottom: 0;
     color: white;
     font-family: Snell Roundhand, cursive ;
@@ -99,30 +100,20 @@ body{
 @keyframes slideshow {
 
 
-0%{ margin-left: 0%;}
+0%,15%{ margin-left: 0%;}
 
-25% {margin-left: -100%;}
+25%,35% {margin-left: -100%;}
 
-50%{ margin-left: -200%;}
+45%,55%{ margin-left: -200%;}
 
-75%{margin-left: -300%;}
+65%,75%{margin-left: -300%;}
 
-100%{
+85%,100%{
     margin-left:-400%;
 }
     
 }
-@keyframes slideshow2{
 
-
-    0%,50%,100%{ margin-left: 0;}
-    
-    60%,90%{
-        margin-left:-100%;
-    }
-
-        
-    }
 
 .herobox{
     height: 65%;   
@@ -168,8 +159,8 @@ body{
     background-size: 100% 100%;
     text-align: center;
     width: 35%;
-    margin-right: 25%;
-    margin-left:2%;
+    margin-right: 15%;
+    margin-left:10%;
     margin-top:2%;
     height: 90%;
     border-radius: 10px;
@@ -184,10 +175,14 @@ body{
     flex-direction: column;
     box-sizing: border-box;
     padding: 2%;
+    margin-right: 15%;
     margin-top: 2%;
     background: linear-gradient(180deg, rgba(104, 123, 230, 0.52), rgba(136, 49, 114, 0.73));
     width: 35%;
     height: 90%;
+}
+.intro2 p{
+    font-size: 0.9vmax;
 }
 .products1, .products2{
     margin-top: 5%;
@@ -354,7 +349,8 @@ body{
     margin-top: 2%;
 }
 .continue a{
-    font-size: 2vmax;
+    color: #04151F;
+    font-size: 1.5vmin;
     border-radius: 10px;
     background-color:#e1d5c6;
     text-decoration: none;
@@ -381,10 +377,81 @@ body{
     margin-top: 0;
     color:#a1d5cb;
 }
-.products1 hr{
+.products1 hr, footer hr{
     margin-bottom: 2%;
     color: #8ab7b0;
 }
 .continue a:hover{
     background-color:#ADAAA0;
+}
+footer{
+    min-width: 340px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.footer_items{
+    display: flex;
+    flex-direction: row;
+}
+.nav_items{
+    color: whitesmoke;
+    font-weight: 800;
+    font-size: 1.2vmax;
+    margin-bottom: 1%;
+}
+.footer_item{
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+.footer_item p{
+    color: whitesmoke;
+    margin:0;
+    padding: 0;
+    font-size: 1vmax;
+}
+.connect{
+    align-self: flex-end;
+    width: 30%;
+    display: flex;
+    float: right;
+    flex-direction: column;
+}
+.connect p{
+    font-size: 1vmax;
+    color: whitesmoke;
+    font-weight: bold;
+}
+.socials{
+    width: 100%;
+}
+.socials img{
+    margin: 1.5%;
+    width: 15%;
+}
+.pin{
+    border-radius: 50%;
+    background-color: #d8d9d8;
+}
+@media only screen and (max-width:600px) and (max-height:1000px){
+    .intro2 p{
+        font-size: 1vmax;
+    }
+    
+}
+@media only screen and (max-width:600px) and (max-height:700px){
+    .intro2 p{
+        font-size: 0.5em;
+    }
+    .intro2 h3{
+        font-size: 0.6em;
+    }
 }
