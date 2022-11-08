@@ -188,13 +188,14 @@ body, main{
     margin-top: 5%;
     padding: 2%;
     width: 91.2%;
-    height: 67%;
+    height: 77%;
     margin-left: 2.5%;
     margin-right: 2.5%;
     background-color: #497976;
     border-radius: 10px;
     min-height: 400px;
 }
+
 .products2{
     background-color: #3B6564;
 }
@@ -453,5 +454,10 @@ footer{
     }
     .intro2 h3{
         font-size: 0.6em;
+    }
+}
+@media only screen and (max-width:700px){
+    .products1, .products2{
+        height: 57%;
     }
 }
