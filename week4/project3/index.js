@@ -18,22 +18,24 @@ function submit() {
       highscore = score;
       $(".highscore").text(`High Score: ${highscore}`);
     }
-  } else if (score == 0) {
-    $(".submit").unbind();
-    $("body").removeClass("tension");
-    $(".fail").hide();
-    $(".fail2").addClass("w-100");
-    $(".submit").text("try again");
-    $('img').attr('src','wrong.png')
-    $(".submit").click(newGame);
-    window.alert(`You lost, the number was ${secret}`);
   } else {
     $("body").removeClass("tension");
     console.log(guesses);
     if (!guesses.includes(guess)) {
       guesses.push(guess);
       score--;
-      if (guess > secret) {
+      if (score == 0) {
+  $(".score").text(`Score: ${score}`);
+        $(".submit").unbind();
+        $("body").removeClass("tension");
+        $(".fail").hide();
+        $(".fail2").addClass("w-100");
+        $(".submit").text("try again");
+        $('img').attr('src','wrong.png')
+        $(".submit").click(newGame);
+        window.alert(`You lost, the number was ${secret}`);
+      } 
+      else if (guess > secret) {
         $(".hint").text("Your guess is too high");
       } else {
         $(".hint").text("Your guess is too low");
