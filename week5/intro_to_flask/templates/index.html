@@ -1,0 +1,125 @@
+{% extends 'base.html' %} {% block head %}
+<title>Reaction Speed Test</title>
+{% endblock %} {% block body %}
+<div class="container text-center">
+  <h1 class="">Reaction Time Test</h1>
+</div>
+<div class="container px-4 py-2 w-75 mx-auto rounded mt-5 game">
+  <div class="row justify-content-between align-items-center">
+    <div class="col-sm-4 rounded text-center mt-3">
+      <div class="fluid-row rounded px-2 scores">
+        <span class="rounded-top average_score">Average time: 0</span>
+        <br />
+        <span class="rounded-bottom best_score">Best time: 0</span>
+      </div>
+    </div>
+
+    <div class="col-sm-3 rounded text-center mt-3">
+      <span class="reset px-4 py-3 rounded">RESET</span>
+    </div>
+  </div>
+  <!-- <div class="number row mt-5 rounded py-4">
+      <div
+        class="container w-100 rounded justify-content-center play"
+      >
+      <div class="instructions container w-100 rounded justify-content-sm-center">
+        <div class="row center-text bg-primary h-50">
+            <div class="colomn-3">
+                <h1>12</h1>
+            </div>
+        </div>
+        <div class="row"></div>
+        <div class="row"></div>
+      </div>
+      </div>
+    </div> -->
+  <div class="number row mt-5 rounded py-4">
+    <div
+      class="container w-100 rounded align-items-center justify-content-center player"
+    >
+      <div class="instructions">
+        <div class="container w-25 h-50 px-4 mt-3">
+          <img
+            src="{{url_for('static',filename='images/tap.png')}}"
+            alt=""
+            class="w-100 h-100"
+          />
+        </div>
+        <div class="container w-50 text-center">
+          <h2>
+            When this box turns <span class="desc">purple</span>, click as fast
+            as you can. <br />Click to start.
+          </h2>
+        </div>
+      </div>
+      <div
+        class="container waiting w-75 h-50 align-items-center justify-content-center"
+      >
+        <div
+          class="container w-50 h-50 text-center pt-3"
+          style="margin-top: 20%"
+        >
+          <span class="h1" style="user-select: none">waiting</span>
+          <img
+            src="{{url_for('static',filename='images/waiting.gif')}}"
+            alt=""
+            style="width: 20%; margin-bottom: 10px; user-select: none"
+          />
+        </div>
+      </div>
+      <form action="/" method="POST">
+        <div
+          class="container reaction_time w-75 h-50 align-items-center justify-content-center"
+        >
+          <div
+            class="container w-50 h-50 text-center pt-3"
+            style="margin-top: 20%"
+          >
+            <span
+              class="h1 reaction_time_text"
+              style="color: yellow; user-select: none"
+              id="reaction_time_text"
+            ></span>
+            <br />
+            <span style="color: yellow; user-select: none"
+              >click again to start a new test</span
+            >
+            <button type="submit" class="btn btn-success">Save Score</button>
+          </div>
+          <input type="text" name="score" id="score" value="" class="output">
+
+        </div>
+      </form>
+      <div
+        class="container too_soon w-75 h-50 align-items-center justify-content-center"
+      >
+        <div
+          class="container w-50 h-50 text-center pt-3"
+          style="margin-top: 20%"
+        >
+          <span class="h1" style="color: #924bed; user-select: none"
+            >Too Soon</span
+          >
+          <br />
+          <span style="color: #924bed; user-select: none"
+            >click again to start a new test</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row his rounded mb-3 mx-auto">
+    <h6 class="mt-3">Top 10:</h6>
+    <ol class="m-3 history mt-0">
+        {% for score in scores %}
+        <li class="mx-2">{{ score.score  }}ms</li>
+        {% endfor %}
+    </ol>
+
+  </div>
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+{% endblock %}
