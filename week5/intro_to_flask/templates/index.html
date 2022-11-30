@@ -113,7 +113,7 @@
     <h6 class="mt-3">Top 10:</h6>
     <ol class="m-3 history mt-0">
         {% for score in scores %}
-        <li class="mx-2">{{ score.score  }}ms</li>
+        <li class="mx-2">{{ score.date_created.strftime("%x")}}: {{ score.score  }}ms</li>
         {% endfor %}
     </ol>
 

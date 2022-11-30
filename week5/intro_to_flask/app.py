@@ -28,7 +28,7 @@ def index():
         #how to not refresh page on POST?
         return redirect('/')
     else:
-        scores = Reaction.query.order_by(Reaction.score).limit(10).all()
+        scores = Reaction.query.order_by(Reaction.score, Reaction.date_created).limit(10).all()
         return render_template('index.html', scores=scores)
 
 if __name__ == '__main__':
